@@ -1,0 +1,14 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/home/victorpc/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+21:11:18.886 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+21:11:19.091 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+21:13:18.831 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+21:13:18.845 [NamespaceSystem-akka.actor.default-dispatcher-7] INFO com.firebase.core.namespace.Terminator$Terminator - 2 actors left to terminate: testehandtalk, testehandtalk-default-rtdb
+21:13:18.862 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - Stopping namespace actor for testehandtalk-default-rtdb
+21:13:18.864 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - Gauges removed for testehandtalk-default-rtdb
+21:13:18.867 [NamespaceSystem-akka.actor.default-dispatcher-8] INFO com.firebase.core.namespace.NamespaceActor - Stopping namespace actor for testehandtalk
+21:13:18.867 [NamespaceSystem-akka.actor.default-dispatcher-8] INFO com.firebase.core.namespace.NamespaceActor - Gauges removed for testehandtalk
+21:13:18.876 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
