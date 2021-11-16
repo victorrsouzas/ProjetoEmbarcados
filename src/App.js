@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import NavBar from './view/NavBar';
 import Login from './auth/Login';
-import Customer from './pages/index';
 import { makeStyles } from '@material-ui/core';
 import Image from './asserts/istockphoto-1279717621-170667a.jpg'
+import Portaria from './pages/index'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,6 +36,8 @@ function App() {
       {user !== null ? (
         <>
           <NavBar setUserState={() => setUser(null)} />
+          <br /><br /><br /><br /><br />
+          <Portaria />
         </>
       ) : (
         <>

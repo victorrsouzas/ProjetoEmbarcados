@@ -10,7 +10,7 @@ import Logo from '../asserts/ban-i2.png';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(5),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -45,9 +45,10 @@ const Login = (props) => {
 
     const override = `
         display: flex;
-        margin-left: 100px;
-        border-color: orange;
+        margin-left: 150px;
+        border-color: #9999ff;
     `;
+
     const handleEmail = (event) => {
         setEmail(event.target.value);
     }
@@ -86,6 +87,7 @@ const Login = (props) => {
                     <CssBaseline />
                     <div className={classes.paper}>
                         <img src={Logo} />
+                        <br />
                         <Typography component="h1" variant="h5">
                             Login
                         </Typography>
@@ -124,11 +126,12 @@ const Login = (props) => {
                                 control={<Checkbox value={rememberme} onChange={(e) => handleCheck(e)} color="primary" />}
                                 label="Lembrar-me"
                             />
+                            <br />
                             {loading ? (
                                 <ScaleLoader
                                     css={override}
                                     size={150}
-                                    color={"#eb4034"}
+                                    color={"#9999ff"}
                                     loading={loading} />
                             ) : (
                                 <Button
