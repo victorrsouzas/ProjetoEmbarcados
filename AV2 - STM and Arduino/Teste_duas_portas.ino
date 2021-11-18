@@ -116,14 +116,14 @@ void loop() // run over and over
   //  }
   //  Firebase.getString(passwordStatus, "PASSWORD");
   //  if (passwordStatus == "TRUE") {
-  //    Serial.println(ledStatus);
+  //    Serial.println(passwordStatus);
   //    digitalWrite(ledAzul, HIGH);
   //    digitalWrite(ledBranco, HIGH);
   //    digitalWrite(ledVermvelho, LOW);
 //      SSerial.print("Entrada Liberada");
   //  }
   //  else {
-  //    Serial.println(ledStatus);
+  //    Serial.println(passwordStatus);
   //    digitalWrite(ledBranco, HIGH);
   //    digitalWrite(ledVermvelho, HIGH);
   //    digitalWrite(ledAzul, LOW);
