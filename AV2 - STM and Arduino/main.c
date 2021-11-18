@@ -112,8 +112,17 @@ void cli(void * vParam)
 	while(1)
 	{
 		caracter = readchar(USART_2);
-		if(caracter == 'h' || caracter == 'H'){
-			sendString("Teste Serial\r\n", USART_1);
+		if(caracter == 'd' || string == 'D'){
+			sendString("Luz Desligada\r\n", USART_1);
+		}
+		if(caracter == 'L' || string == 'L'){
+					sendString("Luz Ligada\r\n", USART_1);
+				}
+		if(caracter == 'f' || string == 'F'){
+					sendString("Acesso Negado\r\n", USART_1);
+				}
+		if(caracter == 't' || string == 'T'){
+							sendString("Acesso Liberado\r\n", USART_1);
 		}
 	}
 }
