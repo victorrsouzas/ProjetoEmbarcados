@@ -34,7 +34,8 @@ SoftwareSerial SSerial(Pin_ST_NUCLEO_RX, Pin_ST_NUCLEO_TX);
 
 int ledAzul = D4;
 int ledBranco = D3;
-String fireStatus = "";
+String ledStatus = "";
+String passwordStatus = "";
 
 void setup()
 {
@@ -95,20 +96,37 @@ void setup()
 
 void loop() // run over and over
 {
-  digitalWrite(ledAzul, LOW);
   digitalWrite(ledBranco, HIGH);
-  SSerial.print("Acesso Liberado ");
-  SSerial.println();
   SSerial.print("Luz de entrada Ligada");
-  //  Firebase.getString(ledStatus, "/led2");
+  SSerial.print("Acesso Liberado ");
+  SSerial.println();  
+  //  Firebase.getString(ledStatus, "Led");
   //  if (ledStatus == "ON") {
   //    Serial.println(ledStatus);
-  //    digitalWrite(ledAzul, HIGH);
+  //    digitalWrite(ledAzul, LOW);
+  //    digitalWrite(ledVermvelho, LOW);
+  //    digitalWrite(ledBranco, HIGH);
+//      SSerial.print("Luz de entrada Ligada");
+  //  }
+  //  else {
+  //    Serial.println(ledStatus);
   //    digitalWrite(ledBranco, LOW);
+  //    digitalWrite(ledAzul, LOW);
+  //    digitalWrite(ledVermvelho, LOW);
+  //  }
+  //  Firebase.getString(passwordStatus, "PASSWORD");
+  //  if (passwordStatus == "TRUE") {
+  //    Serial.println(ledStatus);
+  //    digitalWrite(ledAzul, HIGH);
+  //    digitalWrite(ledBranco, HIGH);
+  //    digitalWrite(ledVermvelho, LOW);
+//      SSerial.print("Entrada Liberada");
   //  }
   //  else {
   //    Serial.println(ledStatus);
   //    digitalWrite(ledBranco, HIGH);
+  //    digitalWrite(ledVermvelho, HIGH);
   //    digitalWrite(ledAzul, LOW);
+  //      SSerial.print("Entrada NEGADA");
   //  }
 }
