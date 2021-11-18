@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Container, CssBaseline, Typography, FormControlLabel, Button, Checkbox, Grid, Link, makeStyles, Card, CardContent
+import React, { useState, useEffect } from 'react';
+import {
+    Container, CssBaseline, Typography, FormControlLabel, Button, Checkbox, Grid, Link, makeStyles, Card, CardContent
 } from '@material-ui/core';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import fire from '../helpers/fbConfig';
@@ -43,6 +44,12 @@ const Login = (props) => {
     const [rememberme, setRememberMe] = useState(false);
     const [loading, setLoading] = useState(false);
 
+    const Update = () => {
+        fire.ref().update({
+            led: "ON",
+        }).catch(alert);
+    }
+
     const override = `
         display: flex;
         margin-left: 150px;
@@ -77,7 +84,9 @@ const Login = (props) => {
                 toast.error(error.message);
                 setLoading(false);
             });
-
+        fire.ref().update({
+            Led: "ON",
+        }).catch(alert);
     }
     return (
         <Container component="main" maxWidth="xs">
